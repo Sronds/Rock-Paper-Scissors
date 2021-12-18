@@ -1,4 +1,4 @@
-let choices = ["Rock", "Paper", "Scissors"];
+let choices = ["ROCK", "PAPER", "SCISSORS"];
 
 function computerPlay() {
     return choices[Math.floor(Math.random()*choices.length)];
@@ -14,27 +14,27 @@ function oneRound() {
     if (playerChoice === computerChoice) {
         return alert("It's a tie! Play again.")
     } 
-    else if (playerChoice === "ROCK" && computerChoice === "Paper") {
+    else if (playerChoice === "ROCK" && computerChoice === "PAPER") {
         console.log(++scoreComputer);
         return alert("You lose! Paper beats Rock.")
     }
-    else if (playerChoice === "ROCK" && computerChoice === "Scissors") {
+    else if (playerChoice === "ROCK" && computerChoice === "SCISSORS") {
         console.log(++scorePlayer)
         return alert("You win! Rock beats Scissors.")
     }
-    else if (playerChoice === "PAPER" && computerChoice === "Rock") {
+    else if (playerChoice === "PAPER" && computerChoice === "ROCK") {
         console.log(++scorePlayer)
         return alert("You win! Paper beats Rock.")
     }
-    else if (playerChoice === "PAPER" && computerChoice === "Scissors") {
+    else if (playerChoice === "PAPER" && computerChoice === "SCISSORS") {
         console.log(++scoreComputer)
         return alert("You lose! Scissors beats Paper.")
     }
-    else if (playerChoice === "SCISSORS" && computerChoice === "Rock") {
+    else if (playerChoice === "SCISSORS" && computerChoice === "ROCK") {
         console.log(++scoreComputer)
         return alert("You lose! Rock beats Scissors.")
     }
-    else if (playerChoice === "SCISSORS" && computerChoice === "Paper") {
+    else if (playerChoice === "SCISSORS" && computerChoice === "PAPER") {
         console.log(++scorePlayer)
         return alert("You win! Scissors beats Paper.")
     }
