@@ -1,6 +1,6 @@
 let choices = ["ROCK", "PAPER", "SCISSORS"];
 
-function computerPlay() {
+function computerPlay() { //picks a random value from array
     return choices[Math.floor(Math.random()*choices.length)];
 }
 
