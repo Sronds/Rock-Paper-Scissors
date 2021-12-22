@@ -1,4 +1,4 @@
-let choices = ["ROCK", "PAPER", "SCISSORS"];
+const choices = ["ROCK", "PAPER", "SCISSORS"];
 
 function computerPlay() { //picks a random value from array
     return choices[Math.floor(Math.random()*choices.length)];
@@ -8,7 +8,7 @@ let scorePlayer = 0;
 let scoreComputer = 0;
 
 function oneRound() {
-    let playerChoice = prompt("Rock, Paper, or Scissors?").toUpperCase()
+    let playerChoice = prompt("Rock, Paper, Scissors?").toUpperCase()
     let computerChoice = computerPlay();
 
     if (playerChoice === computerChoice) {
@@ -48,7 +48,6 @@ function game() {
         return alert("You won! Thanks for playing.")
     }
     else {
-        computerPlay();
         oneRound();
     }
 }
