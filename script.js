@@ -31,7 +31,7 @@ const computerDecision = document.createElement("h3")
 computerDecision.innerText = "Computer choice: " 
 body.append(computerDecision);
 
-const decision = document.createElement("h2")
+const decision = document.createElement("h1")
 decision.innerText = "";
 body.append(decision);
 
@@ -56,8 +56,11 @@ const choices = ["Rock", "Paper", "Scissors"];
 
 function choseRock() {
     let computerChoice = choices[Math.floor(Math.random()*choices.length)];
-    if (computerChoice == "Rock") {
-        yourChoice.innerText = "Your choice: Rock " 
+    if (playerPoints == 5 || computerPoints == 5) {
+        endButton.style.display = ""
+        return endButton    
+    } else if (computerChoice == "Rock") {
+        yourChoice.innerText = "Your choice: Rock "
         computerDecision.innerText = "Computer chose: " + computerChoice
         decision.innerText = "It's a tie! Play again"
     } else if (computerChoice == "Paper") {
@@ -77,7 +80,10 @@ function choseRock() {
 
 function chosePaper() {
     let computerChoice = choices[Math.floor(Math.random()*choices.length)];
-    if (computerChoice == "Paper") {
+    if (playerPoints == 5 || computerPoints == 5) {
+        endButton.style.display = ""
+        return endButton    
+    } else if (computerChoice == "Paper") {
         yourChoice.innerText = "Your choice: Paper" 
         computerDecision.innerText = "Computer choice: " + computerChoice
         decision.innerText = "It's a tie! Play again"
@@ -98,7 +104,10 @@ function chosePaper() {
 
 function choseScissors() {
     let computerChoice = choices[Math.floor(Math.random()*choices.length)];
-    if (computerChoice == "Scissors") {
+    if (playerPoints == 5 || computerPoints == 5) {
+        endButton.style.display = ""
+        return endButton    
+    } else if (computerChoice == "Scissors") {
         yourChoice.innerText = "Your choice: Scissors " 
         computerDecision.innerText = "Computer choice: " + computerChoice
         decision.innerText = "It's a tie! Play again"
@@ -115,8 +124,6 @@ function choseScissors() {
         ++playerPoints
         playerScore.innerText = "Player Score: " + playerPoints;
     }
-    console.log(playerPoints)
-
 }
 
 let endButton = document.createElement("button")
@@ -132,6 +139,7 @@ function startOver() {
     computerPoints = 0;
     playerScore.innerText = "Player Score: " + playerPoints;
     computerScore.innerText = "Computer Score: " + computerPoints;
+    endButton.style.display = "none"
 }
  
 
