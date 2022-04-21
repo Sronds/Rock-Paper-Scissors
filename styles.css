@@ -45,7 +45,7 @@ button {
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   box-sizing: border-box;
   color: #FFFFFF;
-  margin-left: 245px;
+  margin-left: 370px;
   font-family: Phantomsans, sans-serif;
   font-size: 20px;
   justify-content: center;
@@ -74,7 +74,7 @@ button:hover {
     box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
     box-sizing: border-box;
     color: #FFFFFF;
-    margin-left: 580px;
+    margin-left: 810px;
     font-family: Phantomsans, sans-serif;
     font-size: 20px;
     justify-content: center;
